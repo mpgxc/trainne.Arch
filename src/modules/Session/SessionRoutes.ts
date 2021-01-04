@@ -5,7 +5,7 @@ const routes = Router();
 const session = SessionInstanceFactory.getInstance();
 
 routes.post('/create', (request: Request, response: Response) =>
-    session.handle(request, response),
+  session.handle(request, response),
 );
 
 export default routes;

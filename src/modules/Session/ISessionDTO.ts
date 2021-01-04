@@ -1,4 +1,4 @@
 export interface ISessionDTO {
-    username: string;
-    sessionCookie: string | any;
+  username: string;
+  sessionCookie: string;
 }

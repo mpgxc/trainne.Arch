@@ -4,7 +4,7 @@ import tough from 'tough-cookie';
 import axiosCookieJarSupport from 'axios-cookiejar-support';
 
 const api = axios.create({
-    baseURL: process.env.SYNSUITE_SERVER_ENDPOINT,
+  baseURL: process.env.SYNSUITE_SERVER_ENDPOINT,
 });
 
 axiosCookieJarSupport(api);
