@@ -15,7 +15,10 @@ class CreateSessionService {
 
   async execute({ password, username }: ISessionRequest): Promise<ISessionDTO> {
     if (!username || !password) {
-      throw new AppError(401, 'Corpo da requisição inválido!');
+      throw new AppError({
+        statusCode: 401,
+        message: 'Corpo da requisição inválido!',
+      });
     }
 
     await this.CreateSessionCookieService.execute();
@@ -36,8 +39,11 @@ class CreateSessionService {
         withCredentials: true,
       });
 
-      if (response.status !== 200 && response.request.path !== '/assignments') {
-        throw new AppError(401, 'Usuário não autorizado!');
+      if (response.request.path !== '/assignments') {
+        throw new AppError({
+          statusCode: 401,
+          message: 'Usuário não autorizado!',
+        });
       }
 
       const sessionCookie = api.defaults.jar as CookieJarType;
@@ -45,7 +51,10 @@ class CreateSessionService {
 
       return { username, sessionCookie: CookieValue.value };
     } catch (error) {
-      throw new AppError(500, error.message);
+      throw new AppError({
+        statusCode: error.statusCode,
+        message: error.message,
+      });
     }
   }
 }
