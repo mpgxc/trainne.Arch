@@ -1,24 +1,22 @@
 import { Router } from 'express';
-import { SessionRouter } from '../modules/Session';
+import { useSessionRouter } from '../modules/Session';
 // import { IncidentsRouter } from '../domain/.IncidentsTypes';
 
 class useRoutes {
   constructor(private appRouter: Router) {
-    this.loadRoutes();
+    this.loadSessionRouter();
   }
 
-  private loadRoutes() {
+  private loadSessionRouter() {
     /**
      * Rota de Login no Synsuite
      * Responsabilidade: Efetuar acesso ao sistema para todos usuários cadastrados no Synsuite
      */
-    this.appRouter.use('/api/session', SessionRouter);
+    const router = Router();
 
-    // /**
-    //  * Rota de Incidents Types no Synsuite
-    //  * Responsabilidade: Listar todas solicitações de clientes.
-    //  */
-    // this.appRouter.use('/api/incident_types', IncidentsRouter);
+    this.appRouter.use('/api/session', router);
+
+    useSessionRouter(router);
   }
 }
-export default useRoutes;
+export { useRoutes };
