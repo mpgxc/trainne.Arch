@@ -10,4 +10,4 @@ const routeNotFound = (
     message: 'Rota não encontrada!',
   });
 
-export default routeNotFound;
+export { routeNotFound };
