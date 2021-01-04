@@ -24,7 +24,6 @@ class CreateSessionService {
     await this.CreateSessionCookieService.execute();
 
     const headers = {
-      'Content-Type': 'application/x-www-form-urlencoded',
       'User-Agent': process.env.BROWSER_USER_AGENT,
     };
 
