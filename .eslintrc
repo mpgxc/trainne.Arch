@@ -19,6 +19,9 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "no-void": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "no-underscore-dangle": "off",
     "new-cap": "off",
     "no-new": "off",
     "function-paren-newline": "off",
