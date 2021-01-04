@@ -1,10 +1,13 @@
-import { Response, Request } from 'express';
+import { IUseRouterRequest, IUseRouterResponse } from '../../@types/IUseRouter';
 import { CreateSessionService } from './CreateSessionService';
 
 class SessionController {
   constructor(private CreateSessionService: CreateSessionService) {}
 
-  async handle(request: Request, response: Response): Promise<Response> {
+  async handle(
+    request: IUseRouterRequest,
+    response: IUseRouterResponse,
+  ): Promise<IUseRouterResponse> {
     const { username, password } = request.body;
     const sessionResponse = await this.CreateSessionService.execute({
       username,
