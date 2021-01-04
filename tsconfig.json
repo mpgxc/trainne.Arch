@@ -1,29 +1,29 @@
 {
-    "compilerOptions": {
-        "target": "es2018",
-        "module": "commonjs",
-        "lib": [
-            "es6"
-        ],
-        "allowJs": true,
-        "outDir": "./dist",
-        "rootDir": "./src",
-        "removeComments": true,
-        "strict": false,
-        "typeRoots": [
-            "./node_modules/@types",
-            "./src/@types"
-        ],
-        "esModuleInterop": true,
-        "resolveJsonModule": true,
-        "experimentalDecorators": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
-    },
-    "include": [
-        "src/**/*.ts"
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "lib": [
+      "es6"
     ],
-    "exclude": [
-        "node_modules"
+    "allowJs": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "removeComments": true,
+    "strict": false,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
     ],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
 }
