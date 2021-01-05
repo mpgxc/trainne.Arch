@@ -1,4 +1,4 @@
-import { api } from '../../infra/external/SynsuiteEndpoint';
+import { api } from '../../infra/http/external/SynsuiteEndpoint';
 
 class CreateSessionCookieService {
   async execute(): Promise<void> {
