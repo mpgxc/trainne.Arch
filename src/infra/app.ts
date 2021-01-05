@@ -5,9 +5,9 @@ import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
 
-import { useRoutes } from './useRoutes';
-import { errorHandler } from '../helpers/errors/handler';
-import { routeNotFound } from '../helpers/middlewares/routeNotFound';
+import { useRoutes } from './http/useRoutes';
+import { errorHandler } from '../shared/errors/handler';
+import { routeNotFound } from '../shared/middlewares/routeNotFound';
 
 const app = express();
 
