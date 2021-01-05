@@ -22,7 +22,8 @@
     "node-fetch": "^2.6.1",
     "querystring": "^0.2.0",
     "sucrase": "^3.17.0",
-    "tough-cookie": "^4.0.0"
+    "tough-cookie": "^4.0.0",
+    "ts-jest": "^26.4.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.9",
