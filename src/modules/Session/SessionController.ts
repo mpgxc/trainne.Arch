@@ -14,7 +14,9 @@ class SessionController {
       password,
     });
 
-    return response.status(200).json(sessionResponse);
+    return response
+      .status(sessionResponse.statusCode)
+      .json(sessionResponse.data);
   }
 }
 
