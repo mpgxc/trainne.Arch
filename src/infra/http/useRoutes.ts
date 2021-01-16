@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { useSessionRouter } from '../../modules/Session';
+import { useSessionRouter } from '../../domain/Session';
 // import { IncidentsRouter } from '../domain/.IncidentsTypes';
 
 class useRoutes {
