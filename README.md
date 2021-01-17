@@ -5,30 +5,31 @@ Estruturando projeto backend para fins educacionais. Aplicando conceitos de sepa
 .
 ├── config
 ├── domain
-│   └── Session
-│       ├── CreateSessionCookieService.spec.ts
-│       ├── CreateSessionCookieService.ts
-│       ├── CreateSessionService.ts
-│       ├── index.ts
-│       ├── ISessionDTO.ts
-│       ├── ISessionInstanceFactory.ts
-│       ├── SessionController.ts
-│       ├── SessionInstanceFactory.ts
-│       └── SessionRouter.ts
+│   └── Session
+│       ├── CreateSessionCookieService.spec.ts
+│       ├── CreateSessionCookieService.ts
+│       ├── CreateSessionService.ts
+│       ├── index.ts
+│       ├── ISessionDTO.ts
+│       ├── ISessionInstanceFactory.ts
+│       ├── SessionController.ts
+│       ├── SessionInstanceFactory.ts
+│       └── SessionRouter.ts
 ├── infra
-│   ├── app.ts
-│   ├── http
-│   │   ├── external
-│   │   │   └── SynsuiteEndpoint.ts
-│   │   ├── HttpStatusCode.ts
-│   │   └── useRoutes.ts
-│   └── server.ts
+│   ├── app.ts
+│   ├── http
+│   │   ├── external
+│   │   │   └── SynsuiteEndpoint.ts
+│   │   ├── HttpStatusCode.ts
+│   │   └── useRoutes.ts
+│   └── server.ts
 ├── shared
-│   ├── errors
-│   │   ├── AppError.ts
-│   │   └── handler.ts
-│   └── middlewares
-│       └── routeNotFound.ts
+│   ├── errors
+│   │   ├── AppError.ts
+│   │   └── handler.ts
+│   └── middlewares
+│       ├── routeNotFound.spec.ts
+│       └── routeNotFound.ts
 └── @types
     └── IUseRouter.ts
 ```
